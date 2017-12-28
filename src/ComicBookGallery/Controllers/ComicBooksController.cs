@@ -17,16 +17,8 @@ namespace ComicBookGallery.Controllers
         public ActionResult Detail()
         { //Action Method  --Must be public for access
 
-
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Thursday)
-            {
-
-                return Redirect("/");
-            }
-            return Content("Hello from the comic books controller!");
-
-         
-        // Content = "Hello from the comic books controller!"  //Action Result Types
+            return View();
+        }
     }
 
 }
