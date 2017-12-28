@@ -6,10 +6,14 @@ using System.Web.Mvc;
 
 namespace ComicBookGallery.Controllers
 {
-    public class ComicBooksController : Controller
+    public class ComicBooksController : Controller //Controllers --Must be public for access
     {
 
+        public string Detail()
+        { //Action Method  --Must be public for access
 
+            return "Hello from the comic books controller!";
+        }
 
     }
 }
