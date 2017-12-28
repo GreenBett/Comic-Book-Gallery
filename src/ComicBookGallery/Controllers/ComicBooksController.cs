@@ -17,6 +17,8 @@ namespace ComicBookGallery.Controllers
         public ActionResult Detail()
         { //Action Method  --Must be public for access
 
+
+
             return View();
         }
     }
