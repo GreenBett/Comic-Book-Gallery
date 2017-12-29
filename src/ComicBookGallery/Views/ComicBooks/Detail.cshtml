@@ -1,37 +1,25 @@
 ﻿@{/*Razor can write C# code in here!!*/
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Comic Book Detail";
 
 }
-<!DOCTYPE html>
+    <h1>@ViewBag.SeriesTitle</h1>
+    <h2>Issue #@ViewBag.IssueNumber</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        <h1>@ViewBag.SeriesTitle</h1>
-        <h2>Issue #@ViewBag.IssueNumber</h2>
+    <h5>Description:</h5>
+    <div>@Html.Raw(@ViewBag.Description)</div>
 
-        <h5>Description:</h5>
-        <div>@Html.Raw(@ViewBag.Description)</div>
+    @if (ViewBag.Artists.Length > 0)
+    {
+        <h5>Artists:</h5>
+        <div>
+        <ul>
+            @foreach (var artist in ViewBag.Artists)
+            {
 
-        @if (ViewBag.Artists.Length > 0)
-        {
-         <h5>Artists:</h5>
-         <div>
-            <ul>
-                @foreach (var artist in ViewBag.Artists)
-                {
+                <li> @artist </li>
+            }
+        </ul>
 
-                    <li> @artist </li>
-                }
-            </ul>
-
-         </div>
-        }
-
-    </div>
-</body>
-</html>
+        </div>
+    }
