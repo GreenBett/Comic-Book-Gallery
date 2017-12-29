@@ -17,7 +17,7 @@ namespace ComicBookGallery.Controllers
         public ActionResult Detail()
         { //Action Method  --Must be public for access
 
-            //dynamic type changed from var seriesTitle to a property
+            //ViewBag is a dynamic type changed from var seriesTitle to a property
             ViewBag.SeriesTitle = "The Amazing Spider-Man";
             ViewBag.IssueNumber = 700;
             ViewBag.Description = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
