@@ -26,6 +26,15 @@
             </div>
         </div>
     </div>
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+        <div class="backbar">
+            <div class="container">
+                @Html.ActionLink("Return To List", "Index", null, new { @class = "btn btn-default" })
+                
+            </div>
+        </div>
+    }
 
     <div class="container body-content">
         @RenderBody()
@@ -34,7 +43,6 @@
             <p>&copy; @DateTime.Now.Year - Comic Book Gallery</p>
         </footer>
     </div>
-
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
